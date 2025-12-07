@@ -5,8 +5,8 @@ export const cvData = {
   about: {
     name: "Ross MacFarlane",
     title: "Staff Software Engineer",
-    summary: "A brief professional summary about yourself. This will appear at the top of your CV. Write 2-3 sentences about who you are, what you do, and what you're passionate about.",
-    location: "Dunfermline, Scotland",
+    summary: "React / React Native App Developer specializing in building cross-platform mobile and web applications. Experienced in React, React Native, JavaScript, Android, Kotlin, and Java with a focus on delivering high-quality software solutions.",
+    location: "Dunfermline, Scotland, United Kingdom",
     email: "your.email@example.com",
     linkedin: "https://www.linkedin.com/in/ross-macfarlane-65616122/",
     github: "https://github.com/rossmacfarlane", // Optional - remove if you don't have one
@@ -18,7 +18,7 @@ export const cvData = {
       id: 1,
       company: "FanDuel",
       position: "Staff Software Engineer",
-      location: "Edinburgh, Scotland",
+      location: "Edinburgh City, Scotland, United Kingdom",
       startDate: "2022-03", // Format: YYYY-MM
       endDate: "Present", // Use "Present" for current job, or "2023-12" for past jobs
       description: "Building web and native mobile applications using React and React Native",
@@ -27,13 +27,13 @@ export const cvData = {
         "Key achievement or accomplishment 2",
         "Key achievement or accomplishment 3",
       ],
-      technologies: ["React", "React Native", "TypeScript"], // Technologies used in this role
+      technologies: ["React Native", "Git"], // Technologies used in this role
     },
     {
       id: 2,
       company: "FanDuel",
       position: "Senior Software Engineer",
-      location: "Edinburgh, Scotland",
+      location: "Edinburgh City, Scotland, United Kingdom",
       startDate: "2019-08", // Format: YYYY-MM
       endDate: "2022-03", // Use "Present" for current job, or "2023-12" for past jobs
       description: "Building web and native mobile applications using React and React Native",
@@ -42,13 +42,13 @@ export const cvData = {
         "Key achievement or accomplishment 2",
         "Key achievement or accomplishment 3",
       ],
-      technologies: ["React", "React Native", "TypeScript"], // Technologies used in this role
+      technologies: ["React Native", "Git"], // Technologies used in this role
     },
     {
       id: 3,
       company: "FanDuel",
       position: "Software Engineer",
-      location: "Edinburgh, Scotland",
+      location: "Edinburgh, United Kingdom",
       startDate: "2017-08", // Format: YYYY-MM
       endDate: "2019-08", // Use "Present" for current job, or "2023-12" for past jobs
       description: "Building web and native mobile applications using React and React Native",
@@ -57,13 +57,13 @@ export const cvData = {
         "Key achievement or accomplishment 2",
         "Key achievement or accomplishment 3",
       ],
-      technologies: ["React", "React Native", "TypeScript"], // Technologies used in this role
+      technologies: ["Android", "Kotlin"], // Technologies used in this role
     },
     {
       id: 4,
-      company: "Ideage Ltd",
+      company: "Ideagen PLC",
       position: "Development Engineer",
-      location: "East Kilbride, Scotland",
+      location: "East Kilbride",
       startDate: "2014-02", // Format: YYYY-MM
       endDate: "2017-08", // Use "Present" for current job, or "2023-12" for past jobs
       description: "Building cross-platform mobile apps for iOS and Android using Appcelerator Titanium JavaScript framework",
@@ -76,7 +76,70 @@ export const cvData = {
         "Use of CI and Source Control tools such as Team City and Git",
         "Unit testing using Jasmine",
       ],
-      technologies: ["React", "React Native", "TypeScript"], // Technologies used in this role
+      technologies: ["Appcelerator Titanium", "JavaScript", "Alloy", "Backbone.js", "Underscore.js", "Team City", "Git", "Jasmine"], // Technologies used in this role
+    },
+    {
+      id: 5,
+      company: "Agria Pet Insurance",
+      position: "Software Developer",
+      location: "Aylesbury",
+      startDate: "2012-06", // Format: YYYY-MM
+      endDate: "2014-02", // Use "Present" for current job, or "2023-12" for past jobs
+      description: "C#/C++ winforms development with SQL Server",
+      achievements: [
+        "C#/C++ winforms development with SQL Server",
+        "Investigation of system faults providing software or data fixes where appropriate",
+        "Design, development, testing and implementation of new projects or updates to existing software",
+        "Work closely with customers and others in the business to ensure software is delivered on time and resolve any issues that may arise",
+        "Provide regular updates of project work",
+      ],
+      technologies: ["C#", "C++", "SQL Server", "WinForms"], // Technologies used in this role
+    },
+    {
+      id: 6,
+      company: "Credosoft",
+      position: "Consultant/Developer",
+      location: "Glasgow, United Kingdom",
+      startDate: "2010-06", // Format: YYYY-MM
+      endDate: "2012-05", // Use "Present" for current job, or "2023-12" for past jobs
+      description: "C# Winforms, windows services and ASP.net development with Oracle",
+      achievements: [
+        "C# Winforms, windows services and ASP.net development with Oracle",
+        "Oracle PL/SQL development",
+        "Software testing and documentation",
+        "Provide support to customers",
+        "Consultant / Trainer to customer sites worldwide",
+        "Full development cycle",
+      ],
+      technologies: ["C#", "ASP.NET", "Oracle", "PL/SQL", "WinForms", "Windows Services"], // Technologies used in this role
+    },
+    {
+      id: 7,
+      company: "MP Locums",
+      position: "Web and Database Developer",
+      location: "United Kingdom",
+      startDate: "2009-06", // Format: YYYY-MM
+      endDate: "2009-11", // Use "Present" for current job, or "2023-12" for past jobs
+      description: "Created a new website for the company and developed database features",
+      achievements: [
+        "Created a new website for the company",
+        "Increased SEO and Social Networking Services for the company",
+        "Developed the database to include new features and the way data was displayed",
+      ],
+      technologies: ["Web Development", "Database Development", "SEO"], // Technologies used in this role
+    },
+    {
+      id: 8,
+      company: "TomRauch.com",
+      position: "Flex/Actionscript Developer",
+      location: "United Kingdom",
+      startDate: "2010-01", // Format: YYYY-MM
+      endDate: "2010-04", // Use "Present" for current job, or "2023-12" for past jobs
+      description: "Flex/Actionscript development",
+      achievements: [
+        "Flex/Actionscript development",
+      ],
+      technologies: ["Flex", "ActionScript"], // Technologies used in this role
     },
     // Add more jobs by copying the structure above
     // {
@@ -100,7 +163,7 @@ export const cvData = {
     {
       id: 1,
       institution: "Heriot-Watt University",
-      degree: "Bachelor of Science", // e.g., "Bachelor's", "Master's", "PhD"
+      degree: "BSc(Hons)", // e.g., "Bachelor's", "Master's", "PhD"
       field: "Computer Science", // Field of study
       location: "Edinburgh, Scotland",
       startDate: "2006-09", // Format: YYYY-MM
@@ -114,43 +177,47 @@ export const cvData = {
     languages: [
       "JavaScript",
       "TypeScript",
-      "Python",
       "Java",
+      "Kotlin",
+      "C#",
+      "C++",
+      "ActionScript",
+      "PL/SQL",
       // Add more languages
     ],
     frameworks: [
       "React",
-      "Node.js",
-      "Express",
-      "Django",
+      "React Native",
+      "ASP.NET",
+      "Alloy",
+      "Backbone.js",
+      "Underscore.js",
+      "Flex",
       // Add more frameworks/libraries
     ],
     tools: [
       "Git",
-      "Docker",
-      "AWS",
-      "MongoDB",
-      "PostgreSQL",
+      "Team City",
+      "SQL Server",
+      "Oracle",
+      "Jasmine",
       // Add more tools/technologies
     ],
     other: [
       "Agile/Scrum",
       "CI/CD",
-      "Microservices",
+      "Appcelerator Titanium",
+      "Android Development",
+      "iOS Development",
+      "WinForms",
+      "Windows Services",
+      "SEO",
       // Add other skills that don't fit above categories
     ],
   },
   
   projects: [
     // Copy this structure for each project
-    {
-      id: 1,
-      name: "Project Name",
-      description: "A detailed description of what this project does, the problem it solves, and your role in it.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      url: "https://project-url.com", // Optional - remove if no live demo
-      github: "https://github.com/username/project", // Optional - remove if not on GitHub
-    },
     // Add more projects
     // {
     //   id: 2,
