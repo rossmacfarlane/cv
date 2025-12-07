@@ -4,9 +4,18 @@ const About = () => {
   const { about } = cvData;
 
   return (
-    <section id="about" className="section about-section">
+      <section id="about" className="section about-section">
       <div className="container">
         <div className="about-content scroll-reveal">
+          {about.profilePicture && (
+            <div className="about-profile-picture">
+              <img 
+                src={about.profilePicture} 
+                alt={`${about.name} profile picture`}
+                loading="eager"
+              />
+            </div>
+          )}
           <div className="about-header">
             <h1 className="about-name">
               <span className="text-gradient">{about.name}</span>

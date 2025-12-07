@@ -10,10 +10,12 @@ export const cvData = {
     email: "your.email@example.com",
     linkedin: "https://www.linkedin.com/in/ross-macfarlane-65616122/",
     github: "https://github.com/rossmacfarlane", // Optional - remove if you don't have one
+    profilePicture: "profile.jpg", // Profile picture - save your image as profile.jpg in the public folder
   },
   
   experience: [
     // Copy this structure for each job - remove the // to uncomment
+    // logo: Optional - provide a direct logo URL, or leave empty to auto-fetch from Clearbit
     {
       id: 1,
       company: "FanDuel",
@@ -28,6 +30,7 @@ export const cvData = {
         "Key achievement or accomplishment 3",
       ],
       technologies: ["React Native", "Git"], // Technologies used in this role
+      // logo: "https://logo.clearbit.com/fanduel.com", // Optional - auto-fetched if not provided
     },
     {
       id: 2,
