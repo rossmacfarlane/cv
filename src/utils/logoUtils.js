@@ -1,66 +1,46 @@
 /**
- * Get company logo URL
- * Supports:
- * 1. Direct logo URL if provided in data
- * 2. Clearbit Logo API (free, no API key needed)
- * 3. Fallback to a placeholder
+ * Resolve a public asset path for GitHub Pages base URL support.
  */
-export const getCompanyLogo = (companyName, logoUrl) => {
-  // If a direct logo URL is provided, use it
-  if (logoUrl) {
-    return logoUrl;
+export const getAssetUrl = (path) => {
+  if (!path) return null;
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
   }
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${cleanPath}`;
+};
 
-  // Use Clearbit Logo API (free, no API key required)
-  // Format: https://logo.clearbit.com/{domain}
-  // We'll try to extract domain from company name or use a known mapping
-  const domain = getCompanyDomain(companyName);
-  if (domain) {
-    return `https://logo.clearbit.com/${domain}`;
-  }
-
-  // Fallback: return null to use placeholder
-  return null;
+const logoMap = {
+  FanDuel: 'logos/fanduel.svg',
+  'Ideagen PLC': 'logos/ideagen.svg',
+  Ideagen: 'logos/ideagen.svg',
+  'Agria Pet Insurance': 'logos/agria.png',
+  Credosoft: 'logos/credosoft.svg',
+  'MP Locums': 'logos/mplocums.svg',
+  'TomRauch.com': 'logos/tomrauch.svg',
+  'Heriot-Watt University': 'logos/hw.svg',
 };
 
 /**
- * Get company domain from company name
- * Maps known companies to their domains
+ * Get company or institution logo URL from local assets.
  */
-const getCompanyDomain = (companyName) => {
-  const domainMap = {
-    'FanDuel': 'fanduel.com',
-    'Ideagen PLC': 'ideagen.com',
-    'Ideagen': 'ideagen.com',
-    'Agria Pet Insurance': 'agriapetinsurance.com',
-    'Credosoft': 'credosoft.com',
-    'MP Locums': 'mplocums.com',
-    'TomRauch.com': 'tomrauch.com',
-    'Heriot-Watt University': 'hw.ac.uk',
-  };
-
-  // Check exact match first
-  if (domainMap[companyName]) {
-    return domainMap[companyName];
+export const getCompanyLogo = (companyName, logoUrl) => {
+  if (logoUrl) {
+    return getAssetUrl(logoUrl);
   }
 
-  // Try case-insensitive match
-  const lowerName = companyName.toLowerCase();
-  for (const [key, domain] of Object.entries(domainMap)) {
+  if (logoMap[companyName]) {
+    return getAssetUrl(logoMap[companyName]);
+  }
+
+  const lowerName = companyName?.toLowerCase();
+  for (const [key, file] of Object.entries(logoMap)) {
     if (key.toLowerCase() === lowerName) {
-      return domain;
+      return getAssetUrl(file);
     }
   }
 
-  // If no mapping found, try to construct domain from company name
-  // This is a fallback - may not always work
-  const cleanName = companyName
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, '') // Remove special chars
-    .replace(/\s+/g, '') // Remove spaces
-    .replace(/plc|llc|inc|corp|ltd|limited/gi, ''); // Remove common suffixes
-
-  return cleanName ? `${cleanName}.com` : null;
+  return null;
 };
 
 /**
@@ -68,12 +48,10 @@ const getCompanyDomain = (companyName) => {
  */
 export const getCompanyInitials = (companyName) => {
   if (!companyName) return '?';
-  
+
   const words = companyName.trim().split(/\s+/);
   if (words.length >= 2) {
-    // Take first letter of first two words
     return (words[0][0] + words[1][0]).toUpperCase();
   }
-  // Take first two letters of the company name
   return companyName.substring(0, 2).toUpperCase();
 };

@@ -9,7 +9,8 @@ const Contact = () => {
         <div className="contact-content scroll-reveal">
           <h2 className="section-title">Get in Touch</h2>
           <p className="contact-text">
-            I'm always open to discussing new opportunities, interesting projects, or just having a chat.
+            Based in Dunfermline, Scotland. Open to discussing senior and staff engineering roles,
+            mobile development opportunities, and interesting technical challenges.
           </p>
           <div className="contact-links">
             {about.email && (

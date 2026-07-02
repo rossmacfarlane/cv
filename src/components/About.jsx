@@ -1,16 +1,20 @@
 import { cvData } from '../data/cvData';
+import { getAssetUrl } from '../utils/logoUtils';
 
 const About = () => {
   const { about } = cvData;
+  const profilePictureUrl = about.profilePicture
+    ? getAssetUrl(about.profilePicture)
+    : null;
 
   return (
       <section id="about" className="section about-section">
       <div className="container">
         <div className="about-content scroll-reveal">
-          {about.profilePicture && (
+          {profilePictureUrl && (
             <div className="about-profile-picture">
-              <img 
-                src={about.profilePicture} 
+              <img
+                src={profilePictureUrl}
                 alt={`${about.name} profile picture`}
                 loading="eager"
               />

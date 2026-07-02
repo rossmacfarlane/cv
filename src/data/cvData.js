@@ -1,245 +1,271 @@
-// CV Data Structure
-// Fill in your information below - just replace the example values with your own
-
 export const cvData = {
   about: {
     name: "Ross MacFarlane",
     title: "Staff Software Engineer",
-    summary: "React / React Native App Developer specializing in building cross-platform mobile and web applications. Experienced in React, React Native, JavaScript, Android, Kotlin, and Java with a focus on delivering high-quality software solutions.",
+    summary:
+      "Staff Software Engineer with 15+ years of experience building cross-platform mobile and web applications. Currently leading React Native development at FanDuel, delivering features used by millions of users across iOS and Android. Strong background in mobile architecture, team mentoring, and shipping reliable software in fast-paced agile environments.",
     location: "Dunfermline, Scotland, United Kingdom",
-    email: "your.email@example.com",
+    email: "rsmacfarlane88@gmail.com",
     linkedin: "https://www.linkedin.com/in/ross-macfarlane-65616122/",
-    github: "https://github.com/rossmacfarlane", // Optional - remove if you don't have one
-    profilePicture: "profile.jpg", // Profile picture - save your image as profile.jpg in the public folder
+    github: "https://github.com/rossmacfarlane",
+    profilePicture: "profile.jpg",
   },
-  
+
   experience: [
-    // Copy this structure for each job - remove the // to uncomment
-    // logo: Optional - provide a direct logo URL, or leave empty to auto-fetch from Clearbit
     {
       id: 1,
       company: "FanDuel",
       position: "Staff Software Engineer",
-      location: "Edinburgh City, Scotland, United Kingdom",
-      startDate: "2022-03", // Format: YYYY-MM
-      endDate: "Present", // Use "Present" for current job, or "2023-12" for past jobs
-      description: "Building web and native mobile applications using React and React Native",
-      achievements: [
-        "Key achievement or accomplishment 1",
-        "Key achievement or accomplishment 2",
-        "Key achievement or accomplishment 3",
+      location: "Edinburgh, Scotland, United Kingdom",
+      startDate: "2017-08",
+      endDate: "Present",
+      description:
+        "Mobile sportsbook and casino applications serving millions of users across iOS and Android. Progressed from Android native development through to Staff-level React Native leadership.",
+      technologies: [
+        "React Native",
+        "TypeScript",
+        "Kotlin",
+        "Android",
+        "Jest",
+        "Redux",
+        "Git",
+        "CI/CD",
       ],
-      technologies: ["React Native", "Git"], // Technologies used in this role
-      // logo: "https://logo.clearbit.com/fanduel.com", // Optional - auto-fetched if not provided
+      logo: "logos/fanduel.svg",
+      roles: [
+        {
+          position: "Staff Software Engineer",
+          startDate: "2022-03",
+          endDate: "Present",
+          description:
+            "Leading React Native development for FanDuel's mobile sportsbook and casino applications.",
+          achievements: [
+            "Provide technical leadership and mentoring for mobile engineers across feature teams",
+            "Drive architectural decisions for shared React Native codebase serving iOS and Android",
+            "Collaborate with product, design, and backend teams to deliver high-impact mobile features",
+            "Champion code quality, automated testing, and CI/CD practices for mobile releases",
+            "Support production incident response and performance optimization at scale",
+          ],
+        },
+        {
+          position: "Senior Software Engineer",
+          startDate: "2019-08",
+          endDate: "2022-03",
+          description:
+            "Built and shipped major React Native features for FanDuel's iOS and Android applications.",
+          achievements: [
+            "Delivered end-to-end mobile features from design through to App Store and Play Store release",
+            "Contributed to shared component libraries and mobile architecture patterns",
+            "Improved app performance and reliability through profiling and targeted optimizations",
+            "Participated in sprint planning, code reviews, and cross-team technical discussions",
+          ],
+        },
+        {
+          position: "Software Engineer",
+          startDate: "2017-08",
+          endDate: "2019-08",
+          description:
+            "Developed native Android features and contributed to the transition toward React Native.",
+          achievements: [
+            "Built and maintained Android native features using Kotlin and Java",
+            "Integrated mobile applications with REST APIs and third-party SDKs",
+            "Supported the team's adoption of React Native for cross-platform development",
+            "Delivered features within agile sprints with unit testing and peer code reviews",
+          ],
+        },
+      ],
     },
     {
       id: 2,
-      company: "FanDuel",
-      position: "Senior Software Engineer",
-      location: "Edinburgh City, Scotland, United Kingdom",
-      startDate: "2019-08", // Format: YYYY-MM
-      endDate: "2022-03", // Use "Present" for current job, or "2023-12" for past jobs
-      description: "Building web and native mobile applications using React and React Native",
-      achievements: [
-        "Key achievement or accomplishment 1",
-        "Key achievement or accomplishment 2",
-        "Key achievement or accomplishment 3",
-      ],
-      technologies: ["React Native", "Git"], // Technologies used in this role
-    },
-    {
-      id: 3,
-      company: "FanDuel",
-      position: "Software Engineer",
-      location: "Edinburgh, United Kingdom",
-      startDate: "2017-08", // Format: YYYY-MM
-      endDate: "2019-08", // Use "Present" for current job, or "2023-12" for past jobs
-      description: "Building web and native mobile applications using React and React Native",
-      achievements: [
-        "Key achievement or accomplishment 1",
-        "Key achievement or accomplishment 2",
-        "Key achievement or accomplishment 3",
-      ],
-      technologies: ["Android", "Kotlin"], // Technologies used in this role
-    },
-    {
-      id: 4,
       company: "Ideagen PLC",
       position: "Development Engineer",
       location: "East Kilbride",
-      startDate: "2014-02", // Format: YYYY-MM
-      endDate: "2017-08", // Use "Present" for current job, or "2023-12" for past jobs
-      description: "Building cross-platform mobile apps for iOS and Android using Appcelerator Titanium JavaScript framework",
+      startDate: "2014-02",
+      endDate: "2017-08",
+      description:
+        "Built cross-platform mobile apps for iOS and Android using Appcelerator Titanium.",
       achievements: [
-        "Experience using Appcelerator Titanium JavaScript framework to build cross-platform apps for iOS and Android",
-        "Experience using Alloy (MVC) framework",
-        "Use of 3rd party libraries such as Backbone.js and Underscore.js",
-        "Experience of developing and consuming APIs",
-        "Agile Development process having daily stand-ups, sprint planning, sprint reviews, delivery and testing",
-        "Use of CI and Source Control tools such as Team City and Git",
-        "Unit testing using Jasmine",
+        "Built cross-platform apps for iOS and Android using Appcelerator Titanium and Alloy (MVC)",
+        "Used third-party libraries including Backbone.js and Underscore.js",
+        "Developed and consumed REST APIs for mobile and backend integration",
+        "Worked within agile teams with daily stand-ups, sprint planning, and reviews",
+        "Used CI and source control tools including TeamCity and Git",
+        "Wrote unit tests using Jasmine",
       ],
-      technologies: ["Appcelerator Titanium", "JavaScript", "Alloy", "Backbone.js", "Underscore.js", "Team City", "Git", "Jasmine"], // Technologies used in this role
+      technologies: [
+        "Appcelerator Titanium",
+        "JavaScript",
+        "Alloy",
+        "Backbone.js",
+        "Underscore.js",
+        "TeamCity",
+        "Git",
+        "Jasmine",
+      ],
+      logo: "logos/ideagen.svg",
     },
     {
-      id: 5,
+      id: 3,
       company: "Agria Pet Insurance",
       position: "Software Developer",
       location: "Aylesbury",
-      startDate: "2012-06", // Format: YYYY-MM
-      endDate: "2014-02", // Use "Present" for current job, or "2023-12" for past jobs
-      description: "C#/C++ winforms development with SQL Server",
+      startDate: "2012-06",
+      endDate: "2014-02",
+      description: "C#/C++ WinForms development with SQL Server.",
       achievements: [
-        "C#/C++ winforms development with SQL Server",
-        "Investigation of system faults providing software or data fixes where appropriate",
-        "Design, development, testing and implementation of new projects or updates to existing software",
-        "Work closely with customers and others in the business to ensure software is delivered on time and resolve any issues that may arise",
-        "Provide regular updates of project work",
+        "Developed desktop applications using C#, C++, and WinForms with SQL Server",
+        "Investigated system faults and delivered software or data fixes as appropriate",
+        "Designed, developed, tested, and implemented new projects and updates to existing software",
+        "Worked closely with customers and stakeholders to deliver on time and resolve issues",
       ],
-      technologies: ["C#", "C++", "SQL Server", "WinForms"], // Technologies used in this role
+      technologies: ["C#", "C++", "SQL Server", "WinForms"],
+      logo: "logos/agria.png",
     },
     {
-      id: 6,
+      id: 4,
       company: "Credosoft",
       position: "Consultant/Developer",
       location: "Glasgow, United Kingdom",
-      startDate: "2010-06", // Format: YYYY-MM
-      endDate: "2012-05", // Use "Present" for current job, or "2023-12" for past jobs
-      description: "C# Winforms, windows services and ASP.net development with Oracle",
+      startDate: "2010-06",
+      endDate: "2012-05",
+      description:
+        "C# WinForms, Windows services, and ASP.NET development with Oracle.",
       achievements: [
-        "C# Winforms, windows services and ASP.net development with Oracle",
-        "Oracle PL/SQL development",
-        "Software testing and documentation",
-        "Provide support to customers",
-        "Consultant / Trainer to customer sites worldwide",
-        "Full development cycle",
+        "Developed C# WinForms, Windows services, and ASP.NET applications with Oracle",
+        "Wrote Oracle PL/SQL for data access and business logic",
+        "Delivered software testing, documentation, and customer support",
+        "Provided consultant and trainer services to customer sites worldwide",
       ],
-      technologies: ["C#", "ASP.NET", "Oracle", "PL/SQL", "WinForms", "Windows Services"], // Technologies used in this role
+      technologies: [
+        "C#",
+        "ASP.NET",
+        "Oracle",
+        "PL/SQL",
+        "WinForms",
+        "Windows Services",
+      ],
+      logo: "logos/credosoft.svg",
     },
     {
-      id: 7,
+      id: 5,
       company: "MP Locums",
       position: "Web and Database Developer",
       location: "United Kingdom",
-      startDate: "2009-06", // Format: YYYY-MM
-      endDate: "2009-11", // Use "Present" for current job, or "2023-12" for past jobs
-      description: "Created a new website for the company and developed database features",
+      startDate: "2009-06",
+      endDate: "2009-11",
+      description:
+        "Created a new company website and developed database features.",
       achievements: [
-        "Created a new website for the company",
-        "Increased SEO and Social Networking Services for the company",
-        "Developed the database to include new features and the way data was displayed",
+        "Built a new website for the company from the ground up",
+        "Improved SEO and social networking presence",
+        "Extended the database with new features and improved data presentation",
       ],
-      technologies: ["Web Development", "Database Development", "SEO"], // Technologies used in this role
+      technologies: ["Web Development", "Database Development", "SEO"],
+      logo: "logos/mplocums.svg",
     },
     {
-      id: 8,
+      id: 6,
       company: "TomRauch.com",
       position: "Flex/Actionscript Developer",
       location: "United Kingdom",
-      startDate: "2010-01", // Format: YYYY-MM
-      endDate: "2010-04", // Use "Present" for current job, or "2023-12" for past jobs
-      description: "Flex/Actionscript development",
-      achievements: [
-        "Flex/Actionscript development",
-      ],
-      technologies: ["Flex", "ActionScript"], // Technologies used in this role
+      startDate: "2010-01",
+      endDate: "2010-04",
+      description: "Flex and ActionScript development for web applications.",
+      achievements: ["Developed interactive web applications using Flex and ActionScript"],
+      technologies: ["Flex", "ActionScript"],
+      logo: "logos/tomrauch.svg",
     },
-    // Add more jobs by copying the structure above
-    // {
-    //   id: 2,
-    //   company: "Previous Company",
-    //   position: "Previous Role",
-    //   location: "City, Country",
-    //   startDate: "2018-06",
-    //   endDate: "2019-12",
-    //   description: "Description here...",
-    //   achievements: [
-    //     "Achievement 1",
-    //     "Achievement 2",
-    //   ],
-    //   technologies: ["Python", "Django"],
-    // },
   ],
-  
+
   education: [
-    // Copy this structure for each degree/education
     {
       id: 1,
       institution: "Heriot-Watt University",
-      degree: "BSc(Hons)", // e.g., "Bachelor's", "Master's", "PhD"
-      field: "Computer Science", // Field of study
+      degree: "BSc(Hons)",
+      field: "Computer Science",
       location: "Edinburgh, Scotland",
-      startDate: "2006-09", // Format: YYYY-MM
+      startDate: "2006-09",
       endDate: "2010-06",
-      description: "Additional details, honors, relevant coursework, etc. (optional)",
+      description:
+        "Studied core computer science including algorithms, software engineering, databases, and operating systems. Completed a final-year project in mobile application development.",
+      logo: "logos/hw.svg",
     },
   ],
-  
+
   skills: {
-    // Add your skills in the appropriate categories
     languages: [
-      "JavaScript",
       "TypeScript",
-      "Java",
+      "JavaScript",
       "Kotlin",
+      "Java",
       "C#",
       "C++",
       "ActionScript",
       "PL/SQL",
-      // Add more languages
     ],
     frameworks: [
-      "React",
       "React Native",
+      "React",
+      "Redux",
       "ASP.NET",
       "Alloy",
       "Backbone.js",
-      "Underscore.js",
       "Flex",
-      // Add more frameworks/libraries
     ],
     tools: [
       "Git",
-      "Team City",
+      "Jest",
+      "TeamCity",
       "SQL Server",
       "Oracle",
-      "Jasmine",
-      // Add more tools/technologies
+      "CI/CD",
     ],
     other: [
       "Agile/Scrum",
-      "CI/CD",
-      "Appcelerator Titanium",
       "Android Development",
       "iOS Development",
+      "Appcelerator Titanium",
       "WinForms",
       "Windows Services",
-      "SEO",
-      // Add other skills that don't fit above categories
     ],
   },
-  
+
   projects: [
-    // Copy this structure for each project
-    // Add more projects
-    // {
-    //   id: 2,
-    //   name: "Another Project",
-    //   description: "Description...",
-    //   technologies: ["Python", "Flask"],
-    //   url: "https://another-project.com",
-    //   github: "https://github.com/username/another-project",
-    // },
-  ],
-  
-  certifications: [
-    // Optional - remove this entire section if you don't have certifications
-    // {
-    //   id: 1,
-    //   name: "Certification Name",
-    //   issuer: "Issuing Organization",
-    //   date: "2023-01", // Format: YYYY-MM
-    //   url: "https://certificate-url.com", // Optional
-    // },
+    {
+      id: 1,
+      name: "Interactive CV Website",
+      description:
+        "A modern, responsive CV site built with React and Vite. Features scroll animations, an expandable timeline, filterable projects, and automated deployment to GitHub Pages.",
+      technologies: ["React", "Vite", "CSS3", "GitHub Actions", "GitHub Pages"],
+      url: "https://rossmacfarlane.github.io/cv/",
+      github: "https://github.com/rossmacfarlane/cv",
+    },
+    {
+      id: 2,
+      name: "FanDuel Mobile Sportsbook",
+      description:
+        "Cross-platform mobile sportsbook and casino application serving millions of users across iOS and Android. Contributed across multiple roles from Android native development through to Staff-level React Native leadership.",
+      technologies: ["React Native", "TypeScript", "Kotlin", "Android", "Jest"],
+    },
+    {
+      id: 3,
+      name: "Ideagen Compliance Mobile Apps",
+      description:
+        "Cross-platform mobile applications for compliance and quality management, built with Appcelerator Titanium for iOS and Android deployment.",
+      technologies: [
+        "Appcelerator Titanium",
+        "JavaScript",
+        "Alloy",
+        "Backbone.js",
+        "Jasmine",
+      ],
+    },
+    {
+      id: 4,
+      name: "Agria Pet Insurance Platform",
+      description:
+        "Desktop insurance management software built with C# and C++ WinForms, integrated with SQL Server for policy and claims processing.",
+      technologies: ["C#", "C++", "SQL Server", "WinForms"],
+    },
   ],
 };

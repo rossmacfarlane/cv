@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 
-const FilterableGrid = ({ items, filterKey = 'technologies', renderItem }) => {
+const FilterableGrid = ({ items, filterKey = 'technologies', renderItem, gridClassName = '' }) => {
   const [selectedFilter, setSelectedFilter] = useState('all');
 
   // Extract all unique filter values
@@ -35,7 +35,7 @@ const FilterableGrid = ({ items, filterKey = 'technologies', renderItem }) => {
           </button>
         ))}
       </div>
-      <div className="grid-container">
+      <div className={`grid-container ${gridClassName}`.trim()}>
         {filteredItems.length > 0 ? (
           filteredItems.map((item) => (
             <div key={item.id} className="grid-item stagger-item">

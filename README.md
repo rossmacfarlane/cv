@@ -2,15 +2,16 @@
 
 A modern, interactive CV website built with React and Vite, featuring dark mode design, smooth animations, and deployable to GitHub Pages.
 
+Live site: [rossmacfarlane.github.io/cv](https://rossmacfarlane.github.io/cv/)
+
 ## Features
 
-- 🎨 **Dark Mode Design** - Sleek, professional dark theme
-- ✨ **Smooth Animations** - Scroll-reveal animations and transitions
-- 📱 **Responsive** - Mobile-first, works on all devices
-- 🔄 **Interactive Timeline** - Expandable work experience and education
-- 🏷️ **Filterable Projects** - Filter projects by technology
-- 🎯 **Expandable Sections** - Collapsible content sections
-- 🤖 **AI Attribution** - Very subtle AI credit indicator
+- **Dark Mode Design** - Sleek, professional dark theme
+- **Smooth Animations** - Scroll-reveal animations and transitions
+- **Responsive** - Mobile-first, works on all devices
+- **Interactive Timeline** - Expandable work experience and education with company logos
+- **Filterable Projects** - Filter projects by technology
+- **AI Attribution** - Very subtle AI credit indicator
 
 ## Getting Started
 
@@ -24,7 +25,7 @@ A modern, interactive CV website built with React and Vite, featuring dark mode 
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/rossmacfarlane/cv.git
 cd cv
 ```
 
@@ -38,59 +39,38 @@ npm install
 npm run dev
 ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
+4. Open [http://localhost:5173/cv/](http://localhost:5173/cv/) in your browser
 
 ### Adding Your CV Data
 
 1. Open `src/data/cvData.js`
 2. Fill in your information:
    - **About**: Name, title, summary, contact info
-   - **Experience**: Work history with achievements
+   - **Experience**: Work history with achievements and optional `logo` paths
    - **Education**: Educational background
    - **Skills**: Categorized skills (languages, frameworks, tools, other)
    - **Projects**: Portfolio projects with technologies
-   - **Certifications**: Professional certifications (optional)
 
-### Example Data Structure
+### Company Logos
+
+Company and institution logos are stored locally in `public/logos/` and resolved via `src/utils/logoUtils.js`. This avoids dependency on external logo APIs.
+
+1. Add PNG or SVG logo files to `public/logos/` (128px minimum recommended)
+2. Map company names to filenames in `logoMap` inside `logoUtils.js`, or set an explicit `logo` field per entry in `cvData.js`:
 
 ```javascript
-export const cvData = {
-  about: {
-    name: "Your Name",
-    title: "Software Engineer",
-    summary: "Your professional summary...",
-    location: "City, Country",
-    email: "your.email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourusername",
-  },
-  experience: [
-    {
-      id: 1,
-      company: "Company Name",
-      position: "Job Title",
-      location: "City, Country",
-      startDate: "2020-01",
-      endDate: "2023-12", // or "Present"
-      description: "Job description",
-      achievements: [
-        "Achievement 1",
-        "Achievement 2",
-      ],
-      technologies: ["React", "Node.js", "TypeScript"],
-    }
-  ],
-  // ... more sections
-};
+{
+  company: "Example Corp",
+  logo: "logos/example.png",
+  // ...
+}
 ```
 
-### LinkedIn Data Import
+Logo paths are automatically prefixed with the Vite `base` URL for GitHub Pages compatibility.
 
-You can use the LinkedIn parser utility to import your LinkedIn export:
+### Profile Picture
 
-1. Export your LinkedIn data from LinkedIn settings
-2. Use `src/utils/linkedinParser.js` to parse the data
-3. Update `cvData.js` with the parsed data
+Save your photo as `public/profile.jpg`. The About section resolves the path using `import.meta.env.BASE_URL`.
 
 ## Building for Production
 
@@ -150,7 +130,9 @@ Once set up, every push to the `main` branch will automatically:
 
 ```
 cv/
-├── public/              # Static assets
+├── public/
+│   ├── logos/           # Company and institution logos
+│   └── profile.jpg      # Profile photo
 ├── src/
 │   ├── components/      # React components
 │   │   ├── Header.jsx
@@ -161,23 +143,17 @@ cv/
 │   │   ├── Projects.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Timeline.jsx
-│   │   ├── ExpandableSection.jsx
 │   │   ├── FilterableGrid.jsx
 │   │   └── AICredit.jsx
 │   ├── styles/          # CSS files
-│   │   ├── theme.css
-│   │   ├── animations.css
-│   │   └── global.css
-│   ├── utils/           # Utility functions
+│   ├── utils/
 │   │   ├── animations.js
-│   │   └── linkedinParser.js
-│   ├── data/            # CV data
+│   │   └── logoUtils.js
+│   ├── data/
 │   │   └── cvData.js
 │   ├── App.jsx
 │   └── main.jsx
-├── .github/
-│   └── workflows/
-│       └── deploy.yml    # GitHub Actions workflow
+├── .github/workflows/deploy.yml
 ├── vite.config.js
 └── package.json
 ```
@@ -202,7 +178,7 @@ Modify animation timings in `src/styles/animations.css` or adjust transition spe
 
 ### Layout
 
-Components are modular - edit individual component files in `src/components/` to customize layout and behavior.
+Components are modular — edit individual component files in `src/components/` to customize layout and behavior.
 
 ## Technologies Used
 
@@ -218,4 +194,4 @@ This project is open source and available for personal use.
 
 ## Acknowledgments
 
-Built with AI assistance - see the subtle indicator in the bottom-right corner.
+Built with AI assistance — see the subtle indicator in the bottom-right corner.

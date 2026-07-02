@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="20" fill="#1a1033"/>
+  <rect x="8" y="8" width="112" height="112" rx="16" fill="#2d1b69"/>
+  <path d="M36 44h56v10H36V44zm0 22h56v10H36V66zm0 22h38v10H36V88z" fill="#a78bfa"/>
+  <circle cx="92" cy="93" r="8" fill="#8b5cf6"/>
+  <text x="64" y="118" text-anchor="middle" fill="#ddd6fe" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">IDEAGEN</text>
+</svg>

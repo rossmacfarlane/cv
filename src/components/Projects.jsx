@@ -7,7 +7,7 @@ const Projects = () => {
   const { projects } = cvData;
 
   useEffect(() => {
-    initStaggerAnimation('.projects-grid', '.project-item');
+    initStaggerAnimation('.projects-grid', '.stagger-item');
   }, []);
 
   const renderProject = (project) => (
@@ -57,6 +57,7 @@ const Projects = () => {
           items={projects}
           filterKey="technologies"
           renderItem={renderProject}
+          gridClassName="projects-grid"
         />
       </div>
     </section>
