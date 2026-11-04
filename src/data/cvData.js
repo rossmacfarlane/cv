@@ -8,7 +8,7 @@ export const cvData = {
     email: "rsmacfarlane88@gmail.com",
     linkedin: "https://www.linkedin.com/in/ross-macfarlane-65616122/",
     github: "https://github.com/rossmacfarlane",
-    profilePicture: "profile.jpg",
+    profilePicture: "profile.webp",
   },
 
   experience: [

@@ -17,7 +17,7 @@ Live site: [rossmacfarlane.github.io/cv](https://rossmacfarlane.github.io/cv/)
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js (v20.19 or higher; CI uses v24)
 - npm or yarn
 - Git
 
@@ -70,7 +70,7 @@ Logo paths are automatically prefixed with the Vite `base` URL for GitHub Pages 
 
 ### Profile Picture
 
-Save your photo as `public/profile.jpg`. The About section resolves the path using `import.meta.env.BASE_URL`.
+Save your photo as `public/profile.webp` (page) and `public/profile.jpg` (link previews). See `public/README_PROFILE_PICTURE.md`. The About section resolves the path using `import.meta.env.BASE_URL`.
 
 ## Building for Production
 
@@ -105,10 +105,8 @@ npm run preview
    ```
 
 4. **Custom Domain Setup** (Optional)
-   - Create `public/CNAME` file with your subdomain:
-   ```
-   cv.yourdomain.com
-   ```
+   - In the repo, go to **Settings → Pages → Custom domain** and enter your subdomain (e.g. `cv.yourdomain.com`). With GitHub Actions deploys, a `public/CNAME` file is not used.
+   - Change `base` in `vite.config.js` to `'/'` and update the URLs in `index.html`, `robots.txt` and `sitemap.xml`.
    - In Squarespace DNS settings, add:
      - Type: CNAME
      - Host: cv (or your subdomain)
@@ -132,7 +130,8 @@ Once set up, every push to the `main` branch will automatically:
 cv/
 ├── public/
 │   ├── logos/           # Company and institution logos
-│   └── profile.jpg      # Profile photo
+│   ├── profile.webp     # Profile photo (page)
+│   └── profile.jpg      # Profile photo (link previews)
 ├── src/
 │   ├── components/      # React components
 │   │   ├── Header.jsx

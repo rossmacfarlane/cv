@@ -1,13 +1,13 @@
 # Profile Picture Setup
 
-To add your profile picture:
+The site uses two copies of the photo:
 
-1. Download your profile picture image
-2. Save it as `profile.jpg` in this `public` folder
-3. The image will be automatically used in your CV
+- `profile.webp` – shown on the page (set in `src/data/cvData.js`)
+- `profile.jpg` – used for link previews (`og:image` in `index.html`)
 
-**Supported formats:** JPG, PNG, WebP
-**Recommended size:** 400x400px or larger (square aspect ratio works best)
-**File name:** Must be exactly `profile.jpg`
+Keep both small. The photo displays at 200px, so 600×800 is plenty:
 
-The image will be displayed as a circular profile picture in the About section of your CV.
+```bash
+convert original.jpg -resize 600x800 -strip -quality 82 profile.webp
+convert original.jpg -resize 600x800 -strip -interlace Plane -quality 82 profile.jpg
+```
